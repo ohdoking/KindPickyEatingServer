@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yapp.kindpickyeating.domain.UserTb;
@@ -42,7 +43,7 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value="/data")
+	@RequestMapping(value="/data", method = RequestMethod.GET)
 	public @ResponseBody Map<String , Object> getJsonByMap() {
 	    Map<String, Object> jsonObject = new HashMap<String, Object>();
 	         
@@ -51,6 +52,22 @@ public class HomeController {
 	    jsonObject.put("title", "wowTitle");
 	         
 	    return jsonObject; 
+	}
+	
+	@RequestMapping(value = "/dataPost", method = RequestMethod.POST)
+	@ResponseBody
+	public Map<String , Object> excelMethod2(@RequestParam("title") String title) {
+	         
+		logger.info("success : " + title);
+		
+		Map<String, Object> jsonObject = new HashMap<String, Object>();
+	    
+	    jsonObject.put("success", true);
+	    jsonObject.put("total_count", 10);
+	    jsonObject.put("title", title+"ohdoking");
+	    
+	    return jsonObject; 
+
 	}
 	
 }
