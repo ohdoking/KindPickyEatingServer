@@ -191,6 +191,7 @@
 					<username>ohdoking</username>
 					<password>tomcat</password>
 					<path>/${project.artifactId}</path>
+					<update>true</update>
 				</configuration>
 			</plugin>
             <plugin>
