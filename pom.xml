@@ -161,6 +161,25 @@
 			<version>2.5.4</version>
 		</dependency>
 		
+		
+		 <dependency>
+              <groupId>org.codehaus.jackson</groupId>
+              <artifactId>jackson-core-asl</artifactId>
+              <!-- <version>1.9.6</version> -->
+              <!-- <version>1.4.2</version> -->
+              <!-- <version>1.9.9</version> -->
+              <version>1.9.7</version>
+        </dependency>
+
+       <dependency>
+             <groupId>org.codehaus.jackson</groupId>
+             <artifactId>jackson-mapper-asl</artifactId>
+             <!-- <version>1.9.6</version> -->
+             <!-- <version>1.4.2</version> -->
+             <!-- <version>1.9.9</version> -->
+             <version>1.9.7</version>
+       </dependency>
+		
 		<!-- LomBok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>

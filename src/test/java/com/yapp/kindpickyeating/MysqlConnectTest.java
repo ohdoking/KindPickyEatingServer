@@ -11,7 +11,7 @@ import org.junit.Test;
 public class MysqlConnectTest {
 	
 	private static final String DRIVER = "com.mysql.jdbc.Driver";
-	private static final String URL = "jdbc:mysql://127.0.0.1:3306/sample";
+	private static final String URL = "jdbc:mysql://127.0.0.1:3306/kindpickyeatingdb";
 	private static final String USER = "root";
 	private static final String PW = "qmffn17";
 	

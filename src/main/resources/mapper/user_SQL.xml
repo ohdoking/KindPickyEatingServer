@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yapp.kindpickyeating">
+    <select 
+	    id="getUser" 
+	    parameterType="com.yapp.kindpickyeating.dto.LoginDto" 
+	    resultType="com.yapp.kindpickyeating.dto.UserDto">
+	        SELECT
+	            *
+	        FROM
+	            user
+	        WHERE
+	        	email = #{email}
+			AND
+	    		password = #{pw}
+    </select>
+    <insert 
+	    id="insertUser" 
+	    parameterType="com.yapp.kindpickyeating.dto.UserDto" 
+	    useGeneratedKeys="true"
+	    keyProperty="id">
+		  INSERT INTO
+		  	user (nickname,password,email,user_category,religion)
+		  VALUES 
+		  	(#{nickname},#{password},#{email},#{userCategory},#{religion})
+	</insert>
+</mapper>
