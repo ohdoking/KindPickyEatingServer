@@ -65,7 +65,7 @@ public class RestaurantController {
 	    return jsonObject; 
 	}
 	
-	@RequestMapping(value="/comment/{id}", method = RequestMethod.GET)
+	/*@RequestMapping(value="/comment/{id}", method = RequestMethod.GET)
 	public @ResponseBody Map<String , Object> insertComment() {
 	    Map<String, Object> jsonObject = new HashMap<String, Object>();
 	         
@@ -74,6 +74,6 @@ public class RestaurantController {
 	    jsonObject.put("title", "wowTitle");
 	         
 	    return jsonObject; 
-	}
+	}*/
 
 }
